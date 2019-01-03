@@ -4,23 +4,28 @@
 	<title>Главная страница</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="modernizr.custom.js"></script>
 	<script src="script.js"></script>
 </head>
 <body>
 	<header>
-	</header>
-	
+		<nav>
+			<a class="nav_links" href="#about">О косметике</a>
+			<a class="nav_links" href="#products">Продукция</a>
+			<a class="nav_links" href="#order">Как заказать</a>
+		</nav>
+	</header>	
 		<div class="background">
 			<div class="background_text">
 				<h1>Human Being</h1>
 				<p>осознанно и с любовью к каждому созданию на этой планете</p>
-				<button class="background_button">Узнать больше</button>
+				<a class="background_button" href="#about">Узнать больше</a>
 			</div>
 			
 		</div>
 	<main>
 		<div class="about">
-			<h2>O косметике</h2>
+			<h2 id="about">O косметике</h2>
 			<div class="about_slider">
 				<img class="about_slide" src="./images/slide1.jpg">
 				<img class="about_slide" src="./images/slide2.jpg">
@@ -38,39 +43,67 @@
 тот, кто уважает других живых существ<br>
 			</div>
 		</div>
-		<div>
-			<h2>Продукция</h2>
-			<div class="products">
-				<div class="products_product">
-					<img src="./images/product1.jpg">
-					<h3>Матирующая маска</h3>
-					<p>Бархатная гладкая кожа без воспалений</p>
-					<button>Подробнее</button>
-				</div>
-				<div class="products_product">
-					<img src="./images/product1.jpg">
-					<h3>Матирующая маска</h3>
-					<p>Бархатная гладкая кожа без воспалений</p>
-					<button>Подробнее</button>
-				</div>
-				<div class="products_product">
-					<img src="./images/product1.jpg">
-					<h3>Матирующая маска</h3>
-					<p>Бархатная гладкая кожа без воспалений</p>
-					<button>Подробнее</button>
-				</div>
-				<div class="products_product">
-					<img src="./images/product1.jpg">
-					<h3>Матирующая маска</h3>
-					<p>Бархатная гладкая кожа без воспалений</p>
-					<button>Подробнее</button>
-				</div>
+		<div class="div-products">
+			<h2 id="products">Продукция</h2>
+			<div class="splitlayout" id="splitlayout">
+				<div class="products">
+					<div class="products_row">
+						<div class="products_product background-left">
+							<p href="#" class="back back-left" title="back to intro">→</p>
+							<div class="products_info side-left">									
+								<img src="./images/product1.jpg">
+								<h3>Матирующая маска</h3>
+								<p>Бархатная гладкая кожа без воспалений</p>
+								<button class="products_button">Подробнее</button>
+							</div>
+						</div>
+						<div class="products_product background-right">
+							<p href="#" class="back back-right" title="back to intro">&larr;</p>
+							<div class="products_info side-right">								
+								<img src="./images/product1.jpg">
+								<h3>Матирующая маска</h3>
+								<p>Бархатная гладкая кожа без воспалений</p>
+								<button class="products_button">Подробнее</button>
+							</div>
+						</div>
+						<div class="details_product page-left">
+							<h4>Матирующая маска</h4>
+							<div>							 
 
+								<ul>
+									<li>вода</li>
+									<li>глицерин</li>
+									<li>водорастворимое масло виноградной косточки</li>
+									<li>эфирное масло/отдушка по заказу</li>
+									<li>бензоат натрия и сорбат калия</li>
+									<li>молочная кислота</li>
+								</ul>
+								<p>50 гр, 300 руб</p>								
+							</div>
+						</div>	
+						<div class="details_product page-right">
+							<h4>Тест тест</h4>
+							<p>Scenario archetype complementary responsive script pixel sidebar sitemap keep it simple. Complementary visuals footer CSS from alan cooper delightful. Photoshop iconography simplicity user experience affordance narrative ascenders contour. Slab serif interstitial skeuomorphism illustrator design by committee simplicity alan cooper eye tracking. Typography contrast mental model typesetting affordance narrative from CSS. Retina simplicity design by committee typography oblique.</p>
+						</div>
+					</div>			
+													
+					
+				</div>								
 			</div>
+		</div>
+		<div class="order">
+			<h2 id="order">Как заказать</h2>
+			<p>Самовывоз в Петербурге и доставка в любой город России.<br>Нажмите на кнопку для более подробной информации</p>
+			<button>Кнопка</button>
+			<div class="test"></div>
 		</div>		
 	</main>
 	<footer>
-		
+		<a>@humanbeing_cosmetics</a>
+		<a>+9 999 999 99 99</a>
+		<a>nastuha@humanbeing.ru</a>
 	</footer>
+	<script src="classie.js"></script>
+	<script src="splitlayout.js"></script>
 </body>
 </html>

@@ -26,7 +26,7 @@ var $elem = $(".about_text")
         var elemBottom = elemTop + $elem.height();
 
         return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-    }
+    };
 
 
 $(document).on("scroll", function () {
